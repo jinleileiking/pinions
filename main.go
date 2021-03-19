@@ -230,11 +230,11 @@ func (r *RPC) Handle(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrpc2.Req
 			})
 			break
 		}
-		fmt.Println("--------------------SDP send 1--------------------->")
+		// fmt.Println("--------------------SDP send 1--------------------->")
 		// spew.Dump(answer.SDP)
 		// fmt.Println(answer.SDP)
-		dumpSDP(answer.SDP)
-		fmt.Println("------------------------------------------------->")
+		// dumpSDP(answer.SDP)
+		// fmt.Println("------------------------------------------------->")
 
 		err = peer.SetLocalDescription(answer)
 		if err != nil {
@@ -283,7 +283,7 @@ func (r *RPC) Handle(ctx context.Context, conn *jsonrpc2.Conn, req *jsonrpc2.Req
 
 		p.peer = peer
 
-		fmt.Println("--------------------SDP send--------------------->")
+		fmt.Println("--------------------SDP answer send to client--------------------->")
 		// spew.Dump(answer.SDP)
 		// fmt.Println(answer.SDP)
 		dumpSDP(answer.SDP)
